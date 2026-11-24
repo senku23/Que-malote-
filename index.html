@@ -1,0 +1,1988 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emiliano Juárez Hernández | Currículum Vitae Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-deep: #07111f;
+      --navy-primary: #0f2544;
+      --metallic-blue: #1e4b82;
+      --metallic-accent: #2f6db5;
+      --metallic-light: #4b8ad1;
+      --ice-blue: #eef4fb;
+      --slate-border: #dce5f0;
+      --ink-black: #0b0f17;
+      --ink-body: #2c3748;
+      --ink-muted: #5c6b80;
+      --pure-white: #ffffff;
+      --off-white: #f8fafd;
+      --shadow-sm: 0 4px 16px rgba(15, 37, 68, 0.06);
+      --shadow-md: 0 12px 32px rgba(15, 37, 68, 0.11);
+      --shadow-lg: 0 20px 48px rgba(7, 17, 31, 0.18);
+      --transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--ink-body);
+      background-color: var(--off-white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .serif-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      color: var(--ink-black);
+      letter-spacing: -0.01em;
+    }
+
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--metallic-blue), var(--metallic-light), #8ec5fc);
+      z-index: 1100;
+      transition: width 0.1s ease-out;
+    }
+
+    header.navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(7, 17, 31, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: var(--transition);
+    }
+
+    header.navbar.scrolled {
+      background: rgba(7, 17, 31, 0.98);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+    }
+
+    .nav-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+      color: var(--pure-white);
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-monogram {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--metallic-accent), var(--navy-primary));
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      display: grid;
+      place-items: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--pure-white);
+      box-shadow: 0 4px 12px rgba(47, 109, 181, 0.35);
+    }
+
+    nav.nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+      flex-wrap: wrap;
+    }
+
+    nav.nav-links a {
+      color: rgba(255, 255, 255, 0.78);
+      text-decoration: none;
+      font-size: 0.79rem;
+      font-weight: 500;
+      padding: 0.45rem 0.6rem;
+      border-radius: 6px;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    nav.nav-links a:hover,
+    nav.nav-links a.active {
+      color: var(--pure-white);
+      background: rgba(47, 109, 181, 0.28);
+    }
+
+    nav.nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 18px;
+      height: 2px;
+      background: var(--metallic-light);
+      border-radius: 2px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .btn-pdf-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: linear-gradient(135deg, var(--metallic-accent), var(--metallic-blue));
+      color: var(--pure-white);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      padding: 0.5rem 0.95rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .btn-pdf-nav:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(47, 109, 181, 0.45);
+      background: linear-gradient(135deg, var(--metallic-light), var(--metallic-accent));
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: var(--pure-white);
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.25rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Hero Section */
+    section.hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 7.5rem 1.5rem 4.5rem;
+      background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-primary) 52%, #173a69 100%);
+      color: var(--pure-white);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -15%;
+      right: -8%;
+      width: 48%;
+      height: 140%;
+      background: linear-gradient(180deg, rgba(47, 109, 181, 0.24) 0%, rgba(15, 37, 68, 0.08) 100%);
+      transform: skewX(-22deg);
+      pointer-events: none;
+      border-left: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      right: 12%;
+      width: 14%;
+      height: 140%;
+      background: linear-gradient(180deg, rgba(75, 138, 209, 0.16), transparent);
+      transform: skewX(-22deg);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      max-width: 1180px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 3.5rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .portrait-card {
+      position: relative;
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.03));
+      padding: 12px;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: var(--shadow-lg);
+      backdrop-filter: blur(8px);
+      transition: var(--transition);
+    }
+
+    .portrait-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(142, 197, 252, 0.55);
+    }
+
+    .portrait-frame {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4 / 4.6;
+      background: #0b192c;
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .portrait-card:hover .portrait-frame img {
+      transform: scale(1.03);
+    }
+
+    .status-pill {
+      margin-top: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(7, 17, 31, 0.72);
+      border: 1px solid rgba(142, 197, 252, 0.3);
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #dcebfa;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #38bdf8;
+      box-shadow: 0 0 10px #38bdf8;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(1.25); }
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #8ec5fc;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 28px;
+      height: 2px;
+      background: var(--metallic-light);
+    }
+
+    .hero-title {
+      font-size: clamp(2.6rem, 5vw, 4.3rem);
+      line-height: 1.06;
+      color: var(--pure-white);
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: #cfe3fa;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.4rem;
+      padding-bottom: 1.4rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .hero-lead {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.86);
+      max-width: 640px;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.75rem;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+      color: #d6e6f8;
+    }
+
+    .hero-meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hero-meta-item svg {
+      width: 17px;
+      height: 17px;
+      color: #7bb6f7;
+      flex-shrink: 0;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.65rem;
+      border-radius: 10px;
+      background: var(--pure-white);
+      color: var(--navy-deep);
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: var(--ice-blue);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.65rem;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--pure-white);
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      background: rgba(47, 109, 181, 0.35);
+      border-color: var(--pure-white);
+    }
+
+    .hero-motto {
+      margin-top: 2rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--metallic-light);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.25rem;
+      color: #b7d7fb;
+    }
+
+    section.cv-section {
+      padding: 5.5rem 1.5rem;
+      position: relative;
+    }
+
+    section.cv-section.alt-bg {
+      background: var(--pure-white);
+      border-top: 1px solid var(--slate-border);
+      border-bottom: 1px solid var(--slate-border);
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--metallic-blue);
+    }
+
+    .section-tag::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--metallic-blue);
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.6vw, 2.85rem);
+      font-weight: 700;
+      color: var(--ink-black);
+      line-height: 1.15;
+    }
+
+    .section-divider {
+      width: 68px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--navy-primary), var(--metallic-light));
+      border-radius: 3px;
+      margin-top: 0.4rem;
+    }
+
+    .card {
+      background: var(--pure-white);
+      border: 1px solid var(--slate-border);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--navy-primary), var(--metallic-accent));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.35s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: #b8cde6;
+    }
+
+    .card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2rem;
+      align-items: stretch;
+    }
+
+    .about-text p {
+      margin-bottom: 1.15rem;
+      font-size: 1.02rem;
+      color: var(--ink-body);
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .personal-data-list {
+      list-style: none;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .personal-data-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid var(--slate-border);
+    }
+
+    .personal-data-list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .data-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--ice-blue);
+      color: var(--metallic-blue);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .data-label {
+      display: block;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+      font-weight: 600;
+    }
+
+    .data-value {
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--ink-black);
+    }
+
+    .objective-banner {
+      background: linear-gradient(135deg, var(--navy-deep), var(--navy-primary) 65%, var(--metallic-blue));
+      color: var(--pure-white);
+      border-radius: 20px;
+      padding: 2.75rem;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .objective-banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -40px;
+      width: 240px;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      transform: skewX(-20deg);
+    }
+
+    .objective-banner h3 {
+      color: var(--pure-white);
+      font-size: 1.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .objective-banner p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.08rem;
+      max-width: 860px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .objective-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .pillar-box {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 12px;
+      padding: 1.2rem;
+      transition: var(--transition);
+    }
+
+    .pillar-box:hover {
+      background: rgba(255, 255, 255, 0.14);
+      transform: translateY(-3px);
+    }
+
+    .pillar-box strong {
+      display: block;
+      color: #93c5fd;
+      font-size: 0.92rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .pillar-box span {
+      font-size: 0.86rem;
+      color: rgba(255, 255, 255, 0.84);
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      display: grid;
+      gap: 1.75rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--metallic-blue), var(--slate-border));
+    }
+
+    .timeline-item {
+      position: relative;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -2rem;
+      top: 1.65rem;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--pure-white);
+      border: 4px solid var(--metallic-blue);
+      box-shadow: 0 0 0 4px var(--ice-blue);
+      transition: var(--transition);
+    }
+
+    .timeline-item:hover .timeline-dot {
+      background: var(--metallic-blue);
+      transform: scale(1.2);
+    }
+
+    .timeline-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .timeline-role {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--ink-black);
+    }
+
+    .timeline-org {
+      font-weight: 600;
+      color: var(--metallic-blue);
+      font-size: 0.98rem;
+      margin-top: 0.15rem;
+    }
+
+    .badge-period {
+      display: inline-block;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      background: var(--ice-blue);
+      color: var(--navy-primary);
+      font-size: 0.8rem;
+      font-weight: 700;
+      border: 1px solid #c9dcf2;
+    }
+
+    .clean-list {
+      margin-top: 0.85rem;
+      padding-left: 1.2rem;
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .clean-list li {
+      color: var(--ink-body);
+      font-size: 0.96rem;
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+    }
+
+    .research-tag {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--metallic-blue);
+      background: var(--ice-blue);
+      padding: 0.28rem 0.7rem;
+      border-radius: 6px;
+      margin-bottom: 0.85rem;
+    }
+
+    .research-card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 0.65rem;
+    }
+
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+    }
+
+    .filter-btn {
+      padding: 0.55rem 1.15rem;
+      border-radius: 999px;
+      border: 1px solid var(--slate-border);
+      background: var(--pure-white);
+      color: var(--ink-body);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--navy-primary);
+      color: var(--pure-white);
+      border-color: var(--navy-primary);
+      box-shadow: 0 6px 16px rgba(15, 37, 68, 0.2);
+    }
+
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .tech-card {
+      transition: var(--transition);
+    }
+
+    .tech-card.hidden {
+      display: none;
+    }
+
+    .tech-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.65rem;
+    }
+
+    .tech-name {
+      font-weight: 700;
+      color: var(--ink-black);
+      font-size: 1.02rem;
+    }
+
+    .tech-level {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--metallic-blue);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: var(--ice-blue);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 0.85rem;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--navy-primary), var(--metallic-light));
+      border-radius: 999px;
+      transition: width 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .skills-lang-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 2rem;
+    }
+
+    .soft-skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .skill-pill-card {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 1.1rem 1.25rem;
+      background: var(--pure-white);
+      border: 1px solid var(--slate-border);
+      border-radius: 12px;
+      transition: var(--transition);
+    }
+
+    .skill-pill-card:hover {
+      border-color: var(--metallic-blue);
+      transform: translateX(4px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .skill-check {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--navy-primary), var(--metallic-blue));
+      color: var(--pure-white);
+      display: grid;
+      place-items: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .lang-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .lang-item {
+      padding: 1.15rem;
+      border-radius: 12px;
+      background: var(--off-white);
+      border: 1px solid var(--slate-border);
+    }
+
+    .lang-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.45rem;
+    }
+
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .interest-card {
+      text-align: left;
+    }
+
+    .interest-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--navy-primary), var(--metallic-accent));
+      color: var(--pure-white);
+      display: grid;
+      place-items: center;
+      margin-bottom: 1.1rem;
+      box-shadow: 0 8px 18px rgba(30, 75, 130, 0.25);
+    }
+
+    .interest-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 2.25rem;
+      align-items: start;
+    }
+
+    .contact-info-box {
+      background: var(--navy-deep);
+      color: var(--pure-white);
+      border-radius: 18px;
+      padding: 2.4rem;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .contact-info-box h3 {
+      color: var(--pure-white);
+      font-size: 1.9rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-info-box p {
+      color: rgba(255, 255, 255, 0.78);
+      margin-bottom: 1.75rem;
+    }
+
+    .contact-channels {
+      display: grid;
+      gap: 1.15rem;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.95rem 1.1rem;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--pure-white);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .contact-link:hover {
+      background: rgba(47, 109, 181, 0.35);
+      border-color: var(--metallic-light);
+      transform: translateX(4px);
+    }
+
+    .copy-badge {
+      margin-left: auto;
+      font-size: 0.72rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.14);
+      color: #cfe3fa;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+    }
+
+    .copy-badge:hover {
+      background: var(--pure-white);
+      color: var(--navy-deep);
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 1.15rem;
+    }
+
+    .form-group {
+      display: grid;
+      gap: 0.4rem;
+    }
+
+    .form-group label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ink-black);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.82rem 1rem;
+      border-radius: 10px;
+      border: 1px solid var(--slate-border);
+      background: var(--off-white);
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--ink-black);
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--metallic-blue);
+      background: var(--pure-white);
+      box-shadow: 0 0 0 4px rgba(47, 109, 181, 0.14);
+    }
+
+    .btn-submit {
+      padding: 0.9rem 1.75rem;
+      border-radius: 10px;
+      border: none;
+      background: linear-gradient(135deg, var(--navy-primary), var(--metallic-blue));
+      color: var(--pure-white);
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(30, 75, 130, 0.32);
+    }
+
+    .form-feedback {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--metallic-blue);
+      min-height: 1.3rem;
+    }
+
+    footer.cv-footer {
+      background: var(--ink-black);
+      color: rgba(255, 255, 255, 0.72);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    footer.cv-footer strong {
+      color: var(--pure-white);
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 1.75rem;
+      right: 1.75rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--navy-primary);
+      color: var(--pure-white);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: var(--shadow-md);
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: var(--transition);
+      z-index: 950;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      background: var(--metallic-blue);
+      transform: translateY(-3px);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1060px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      nav.nav-links {
+        position: fixed;
+        top: 66px;
+        left: 0;
+        width: 100%;
+        background: var(--navy-deep);
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem 1.5rem 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        display: none;
+      }
+
+      nav.nav-links.open {
+        display: flex;
+      }
+
+      nav.nav-links a {
+        padding: 0.7rem 0.9rem;
+        font-size: 0.92rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .two-col-grid,
+      .skills-lang-grid,
+      .contact-wrapper,
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portrait-card {
+        max-width: 310px;
+        margin: 0 auto;
+      }
+
+      .objective-pillars {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .soft-skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section.cv-section {
+        padding: 4rem 1.15rem;
+      }
+
+      .objective-banner,
+      .card,
+      .contact-info-box {
+        padding: 1.5rem;
+      }
+    }
+
+    @media print {
+      header.navbar,
+      .scroll-progress,
+      .back-to-top,
+      .hero-cta-group,
+      .filter-tabs,
+      .contact-form,
+      .copy-badge {
+        display: none !important;
+      }
+
+      body {
+        background: #ffffff !important;
+        color: #0b0f17 !important;
+        font-size: 11pt;
+      }
+
+      section.hero {
+        min-height: auto !important;
+        padding: 2rem 1.5rem !important;
+        background: #0f2544 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      section.cv-section {
+        padding: 1.8rem 1.5rem !important;
+        page-break-inside: avoid;
+      }
+
+      .card, .objective-banner, .contact-info-box {
+        box-shadow: none !important;
+        border: 1px solid #cbd5e1 !important;
+        page-break-inside: avoid;
+      }
+
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Interactive Navigation Header -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="brand">
+        <span class="brand-monogram">EJ</span>
+        <span>Emiliano Juárez</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+        <a href="#inicio" class="active">Inicio</a>
+        <a href="#quien-soy">¿Quién soy?</a>
+        <a href="#objetivo">Objetivo</a>
+        <a href="#formacion">Formación</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#investigacion">Investigación</a>
+        <a href="#conocimientos">Conocimientos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#idiomas">Idiomas</a>
+        <a href="#intereses">Intereses</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="btn-pdf-nav" onclick="window.print()" title="Descargar o imprimir CV en PDF">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>PDF</span>
+        </button>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. INICIO Y PRESENTACIÓN -->
+  <section id="inicio" class="hero">
+    <div class="hero-grid">
+      <div class="portrait-card reveal in-view">
+        <div class="portrait-frame">
+          <img src="data:image/jpeg;base64,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" alt="Fotografía profesional de Emiliano Juárez Hernández" />
+        </div>
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span>Disponibilidad de horario</span>
+        </div>
+      </div>
+
+      <div class="hero-content reveal in-view">
+        <div class="hero-eyebrow">Currículum Vitae Digital</div>
+        <h1 class="hero-title">Emiliano Juárez Hernández</h1>
+        <p class="hero-subtitle">Ingeniero Químico en Formación &bull; Técnico en Soporte de Cómputo</p>
+        <p class="hero-lead">
+          Estudiante de Ingeniería Química en el Tecnológico Nacional de México, Campus Celaya, con formación técnica en soporte y mantenimiento de equipos de cómputo. Comprometido con la excelencia académica, el rigor científico y la resolución metódica de problemas.
+        </p>
+
+        <div class="hero-meta-bar">
+          <span class="hero-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Cortazar, Guanajuato, México
+          </span>
+          <span class="hero-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            411 153 2775
+          </span>
+          <span class="hero-meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            kaibacorps777@gmail.com
+          </span>
+        </div>
+
+        <div class="hero-cta-group">
+          <button type="button" class="btn-primary" onclick="window.print()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar / Imprimir CV en PDF
+          </button>
+          <a href="#contacto" class="btn-secondary">
+            <span>Contactar directamente</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <blockquote class="hero-motto">
+          “Aprender, innovar y aportar para un mejor mañana”
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. ¿QUIÉN SOY? -->
+  <section id="quien-soy" class="cv-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Perfil Personal y Profesional</span>
+        <h2 class="section-title">¿Quién soy?</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="two-col-grid">
+        <div class="card about-text reveal">
+          <p>
+            Soy <strong>Emiliano Juárez Hernández</strong>, estudiante de primer semestre de <strong>Ingeniería Química</strong> en el Tecnológico Nacional de México (Campus Celaya), con formación técnica en soporte y mantenimiento de equipos de cómputo adquirida durante mi bachillerato tecnológico en el CBTIS 172.
+          </p>
+          <p>
+            Destaco por mi <strong>responsabilidad, puntualidad, disciplina y disposición constante para aprender y resolver problemas</strong>. Combino el rigor analítico de las ciencias químicas y matemáticas con habilidades prácticas en informática, programación y soporte técnico.
+          </p>
+          <p>
+            Cuento con experiencia en atención al cliente, organización operativa y trabajo en equipo, cualidades que impulso con una clara vocación científica: convertirme en miembro de un equipo de investigación que aporte conocimiento a la ciencia para mejorar el mundo.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <h3 style="font-size: 1.5rem; margin-bottom: 1.25rem;">Datos Personales</h3>
+          <ul class="personal-data-list">
+            <li>
+              <span class="data-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </span>
+              <div>
+                <span class="data-label">Edad</span>
+                <span class="data-value">18 años</span>
+              </div>
+            </li>
+            <li>
+              <span class="data-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div>
+                <span class="data-label">Ciudad</span>
+                <span class="data-value">Cortazar, Guanajuato</span>
+              </div>
+            </li>
+            <li>
+              <span class="data-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <div>
+                <span class="data-label">Teléfono</span>
+                <span class="data-value">411 153 2775</span>
+              </div>
+            </li>
+            <li>
+              <span class="data-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </span>
+              <div>
+                <span class="data-label">Correo Electrónico</span>
+                <span class="data-value">kaibacorps777@gmail.com</span>
+              </div>
+            </li>
+            <li>
+              <span class="data-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </span>
+              <div>
+                <span class="data-label">Información Adicional</span>
+                <span class="data-value">Disponibilidad de horario</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. OBJETIVO PROFESIONAL -->
+  <section id="objetivo" class="cv-section alt-bg">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Proyección y Metas</span>
+        <h2 class="section-title">Objetivo Profesional</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="objective-banner reveal">
+        <h3>Aportar soluciones innovadoras a la ciencia y la industria</h3>
+        <p>
+          Formar parte de una empresa o institución donde pueda aplicar y desarrollar mis conocimientos, contribuir con soluciones innovadoras y seguir aprendiendo. A largo plazo, aspiro a formar parte de un <strong>equipo de investigación en el área científica o tecnológica</strong>, aportando ideas que impulsen el progreso y el bienestar de la sociedad.
+        </p>
+
+        <div class="objective-pillars">
+          <div class="pillar-box">
+            <strong>01. Aplicación Práctica</strong>
+            <span>Integrar fundamentos de ingeniería química, cálculo y tecnología en entornos reales de trabajo.</span>
+          </div>
+          <div class="pillar-box">
+            <strong>02. Rigor y Aprendizaje</strong>
+            <span>Desarrollar competencias técnicas de alto nivel mediante disciplina, puntualidad y mejora continua.</span>
+          </div>
+          <div class="pillar-box">
+            <strong>03. Vocación Científica</strong>
+            <span>Contribuir en proyectos de investigación que impulsen la ciencia y el bienestar social.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. FORMACIÓN ACADÉMICA -->
+  <section id="formacion" class="cv-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Trayectoria Educativa</span>
+        <h2 class="section-title">Formación Académica</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item card reveal">
+          <span class="timeline-dot"></span>
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Ingeniería Química</h3>
+              <p class="timeline-org">Tecnológico Nacional de México (TecNM), Campus Celaya</p>
+            </div>
+            <span class="badge-period">Actualmente cursando &bull; 1er Semestre</span>
+          </div>
+          <p>
+            Formación universitaria orientada al estudio de procesos químicos, química inorgánica, cálculo diferencial, modelado matemático y fundamentos de programación aplicados a la ingeniería.
+          </p>
+          <ul class="clean-list">
+            <li>Prácticas experimentales de laboratorio en química inorgánica, estequiometría y termoquímica.</li>
+            <li>Análisis matemático de funciones, límites y derivadas con soporte gráfico en GeoGebra.</li>
+            <li>Desarrollo de algoritmos y programación estructurada / orientada a objetos.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item card reveal">
+          <span class="timeline-dot"></span>
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Bachillerato Técnico en Soporte y Mantenimiento de Equipo de Cómputo</h3>
+              <p class="timeline-org">CBTIS 172 &bull; Cortazar, Guanajuato</p>
+            </div>
+            <span class="badge-period">Concluido (sin titulación técnica)</span>
+          </div>
+          <p>
+            Formación media superior con especialidad tecnológica en diagnóstico, mantenimiento preventivo y correctivo de equipos de cómputo, configuración de sistemas y soporte técnico.
+          </p>
+          <ul class="clean-list">
+            <li>Diagnóstico de fallas de hardware y software en equipos de escritorio y portátiles.</li>
+            <li>Mantenimiento preventivo, limpieza técnica de componentes e instalación de sistemas operativos.</li>
+            <li>Atención y orientación técnica básica a usuarios.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. EXPERIENCIA Y PRÁCTICAS PROFESIONALES -->
+  <section id="experiencia" class="cv-section alt-bg">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Trayectoria Laboral y Operativa</span>
+        <h2 class="section-title">Experiencia y Prácticas Profesionales</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item card reveal">
+          <span class="timeline-dot"></span>
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Empacador / Cerillito</h3>
+              <p class="timeline-org">Básicos</p>
+            </div>
+            <span class="badge-period">1 año y medio</span>
+          </div>
+          <p>
+            Experiencia laboral continua enfocada en atención al cliente, agilidad operativa, orden y trabajo colaborativo en equipo.
+          </p>
+          <ul class="clean-list">
+            <li><strong>Empaque de productos:</strong> Clasificación y acomodo cuidadoso de mercancía en línea de cajas.</li>
+            <li><strong>Limpieza de áreas de trabajo:</strong> Conservación permanente del orden e higiene en estaciones operativas.</li>
+            <li><strong>Apoyo en acomodo y organización de mercancía:</strong> Surtido y organización eficiente en piso de venta.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item card reveal">
+          <span class="timeline-dot"></span>
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Prácticas Técnicas en Soporte y Mantenimiento de Cómputo</h3>
+              <p class="timeline-org">Laboratorio de Cómputo &bull; CBTIS 172</p>
+            </div>
+            <span class="badge-period">Formación Técnica</span>
+          </div>
+          <p>
+            Actividades prácticas de diagnóstico, ensamblaje y mantenimiento preventivo de equipos de cómputo durante el bachillerato técnico.
+          </p>
+          <ul class="clean-list">
+            <li>Ensamblaje, limpieza interna y verificación de componentes físicos de PC.</li>
+            <li>Instalación de software base, controladores y herramientas de oficina.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. INVESTIGACIÓN ACADÉMICA -->
+  <section id="investigacion" class="cv-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Ciencia, Análisis y Proyectos</span>
+        <h2 class="section-title">Investigación Académica y Proyectos Formativos</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="research-grid">
+        <article class="card research-card reveal">
+          <span class="research-tag">Química Inorgánica &bull; Estructura Molecular</span>
+          <h3>Geometría Molecular VSEPR e Hibridación de Orbitales</h3>
+          <p>
+            Análisis teórico y modelado tridimensional físico de estructuras moleculares e iónicas (H<sub>2</sub>O, C<sub>3</sub>H<sub>8</sub>, ClO<sub>3</sub><sup>&minus;</sup> e IOF<sub>4</sub><sup>&minus;</sup>) aplicando la teoría de repulsión de pares electrónicos de la capa de valencia.
+          </p>
+        </article>
+
+        <article class="card research-card reveal">
+          <span class="research-tag">Laboratorio de Química &bull; Estequiometría</span>
+          <h3>Balanceo de Reacciones, Nomenclatura y Termoquímica</h3>
+          <p>
+            Elaboración de reportes científicos de laboratorio sobre balanceo algebraico y redox, cálculos estequiométricos detallados, nomenclatura inorgánica y análisis energético de reacciones químicas.
+          </p>
+        </article>
+
+        <article class="card research-card reveal">
+          <span class="research-tag">Innovación y Sostenibilidad</span>
+          <h3>Proyecto &ldquo;Tlalli&rdquo;: Producto Alimenticio y Empaque Biodegradable</h3>
+          <p>
+            Investigación de mercado mediante encuesta aplicada a 58 participantes, análisis de resultados y propuesta de empaque ecológico biodegradable de grado alimenticio para mazapán de cacahuate y semillas.
+          </p>
+        </article>
+
+        <article class="card research-card reveal">
+          <span class="research-tag">Cálculo Diferencial &bull; Modelado Gráfico</span>
+          <h3>Análisis de Funciones, Límites y Derivadas</h3>
+          <p>
+            Resolución analítica de problemas de cálculo diferencial con apoyo de bibliografía especializada (Stewart y Larson) y verificación geométrica mediante graficación digital en GeoGebra.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CONOCIMIENTOS TÉCNICOS -->
+  <section id="conocimientos" class="cv-section alt-bg">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Dominio Disciplinar y Tecnológico</span>
+        <h2 class="section-title">Conocimientos Técnicos</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="filter-tabs reveal" role="tablist" aria-label="Filtrar conocimientos técnicos">
+        <button type="button" class="filter-btn active" data-filter="all">Todos</button>
+        <button type="button" class="filter-btn" data-filter="quimica">Química y Ciencias</button>
+        <button type="button" class="filter-btn" data-filter="soporte">Soporte Técnico</button>
+        <button type="button" class="filter-btn" data-filter="programacion">Programación y Web</button>
+      </div>
+
+      <div class="tech-grid" id="techGrid">
+        <div class="card tech-card reveal" data-category="quimica">
+          <div class="tech-top">
+            <span class="tech-name">Química Inorgánica y Estequiometría</span>
+            <span class="tech-level">En formación</span>
+          </div>
+          <div class="progress-track"><div class="progress-fill" data-width="85%"></div></div>
+          <p style="font-size: 0.9rem; color: var(--ink-muted);">Nomenclatura química, balanceo redox/algebraico, geometría molecular VSEPR y prácticas de laboratorio.</p>
+        </div>
+
+        <div class="card tech-card reveal" data-category="quimica">
+          <div class="tech-top">
+            <span class="tech-name">Cálculo Diferencial y GeoGebra</span>
+            <span class="tech-level">Sólido</span>
+          </div>
+          <div class="progress-track"><div class="progress-fill" data-width="82%"></div></div>
+          <p style="font-size: 0.9rem; color: var(--ink-muted);">Análisis de funciones, límites, derivadas y modelado gráfico interactivo.</p>
+        </div>
+
+        <div class="card tech-card reveal" data-category="soporte">
+          <div class="tech-top">
+            <span class="tech-name">Soporte y Mantenimiento de Equipos de Cómputo</span>
+            <span class="tech-level">Técnico</span>
+          </div>
+          <div class="progress-track"><div class="progress-fill" data-width="88%"></div></div>
+          <p style="font-size: 0.9rem; color: var(--ink-muted);">Conocimientos básicos y técnicos en mantenimiento preventivo, diagnóstico de hardware e instalación de software.</p>
+        </div>
+
+        <div class="card tech-card reveal" data-category="programacion">
+          <div class="tech-top">
+            <span class="tech-name">HTML5 y CSS3</span>
+            <span class="tech-level">Intermedio</span>
+          </div>
+          <div class="progress-track"><div class="progress-fill" data-width="80%"></div></div>
+          <p style="font-size: 0.9rem; color: var(--ink-muted);">Desarrollo de páginas web responsivas, estructura semántica y diseño moderno.</p>
+        </div>
+
+        <div class="card tech-card reveal" data-category="programacion">
+          <div class="tech-top">
+            <span class="tech-name">Python y Programación Orientada a Objetos</span>
+            <span class="tech-level">En desarrollo</span>
+          </div>
+          <div class="progress-track"><div class="progress-fill" data-width="75%"></div></div>
+          <p style="font-size: 0.9rem; color: var(--ink-muted);">Lógica de programación, funciones, estructuras de datos básicas y fundamentos de POO.</p>
+        </div>
+
+        <div class="card tech-card reveal" data-category="soporte">
+          <div class="tech-top">
+            <span class="tech-name">Ofimática y Documentación Académica</span>
+            <span class="tech-level">Avanzado</span>
+          </div>
+          <div class="progress-track"><div class="progress-fill" data-width="90%"></div></div>
+          <p style="font-size: 0.9rem; color: var(--ink-muted);">Redacción de informes técnicos, hojas de cálculo y presentaciones ejecutivas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. HABILIDADES & 9. IDIOMAS -->
+  <section id="habilidades" class="cv-section">
+    <div class="container">
+      <div class="skills-lang-grid">
+        <div>
+          <div class="section-header reveal">
+            <span class="section-tag">Competencias Personales</span>
+            <h2 class="section-title">Habilidades</h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="soft-skills-grid reveal">
+            <div class="skill-pill-card">
+              <span class="skill-check">&#10003;</span>
+              <strong>Puntualidad y responsabilidad</strong>
+            </div>
+            <div class="skill-pill-card">
+              <span class="skill-check">&#10003;</span>
+              <strong>Facilidad de comunicación y trabajo en equipo</strong>
+            </div>
+            <div class="skill-pill-card">
+              <span class="skill-check">&#10003;</span>
+              <strong>Autonomía e iniciativa</strong>
+            </div>
+            <div class="skill-pill-card">
+              <span class="skill-check">&#10003;</span>
+              <strong>Resolución de problemas</strong>
+            </div>
+            <div class="skill-pill-card">
+              <span class="skill-check">&#10003;</span>
+              <strong>Organización y limpieza</strong>
+            </div>
+            <div class="skill-pill-card">
+              <span class="skill-check">&#10003;</span>
+              <strong>Adaptabilidad</strong>
+            </div>
+            <div class="skill-pill-card">
+              <span class="skill-check">&#10003;</span>
+              <strong>Atención al cliente</strong>
+            </div>
+            <div class="skill-pill-card">
+              <span class="skill-check">&#10003;</span>
+              <strong>Disposición para aprender</strong>
+            </div>
+          </div>
+        </div>
+
+        <div id="idiomas">
+          <div class="section-header reveal">
+            <span class="section-tag">Comunicación</span>
+            <h2 class="section-title">Idiomas</h2>
+            <div class="section-divider"></div>
+          </div>
+
+          <div class="card lang-card reveal">
+            <div class="lang-item">
+              <div class="lang-header">
+                <strong style="font-size: 1.1rem; color: var(--ink-black);">Español</strong>
+                <span class="badge-period">Nativo</span>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--ink-muted);">Comunicación oral y escrita fluida en entornos académicos, técnicos y laborales.</p>
+            </div>
+
+            <div class="lang-item">
+              <div class="lang-header">
+                <strong style="font-size: 1.1rem; color: var(--ink-black);">Inglés</strong>
+                <span class="badge-period">Nivel básico - intermedio</span>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--ink-muted);">Mayor facilidad para comprensión y traducción escrita de documentos académicos y técnicos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. ÁREAS DE INTERÉS -->
+  <section id="intereses" class="cv-section alt-bg">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Vocación y Curiosidad Intelectual</span>
+        <h2 class="section-title">Áreas de Interés</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="interests-grid">
+        <div class="card interest-card reveal">
+          <div class="interest-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6"/><path d="M10 3v5.5l-4.5 7.8A2 2 0 0 0 7.2 19h9.6a2 2 0 0 0 1.7-2.7L14 8.5V3"/></svg>
+          </div>
+          <h3>Investigación Científica y Química</h3>
+          <p style="font-size: 0.94rem;">Estudio de procesos químicos, laboratorio experimental, nuevos materiales y ciencia aplicada al desarrollo sostenible.</p>
+        </div>
+
+        <div class="card interest-card reveal">
+          <div class="interest-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Programación y Desarrollo Web</h3>
+          <p style="font-size: 0.94rem;">Diseño de interfaces web interactivas en HTML5/CSS3/JS y programación en Python orientada a soluciones prácticas.</p>
+        </div>
+
+        <div class="card interest-card reveal">
+          <div class="interest-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Soporte y Tecnología Computacional</h3>
+          <p style="font-size: 0.94rem;">Mantenimiento técnico de equipos de cómputo, optimización de sistemas y herramientas digitales para ingeniería.</p>
+        </div>
+
+        <div class="card interest-card reveal">
+          <div class="interest-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c4.97 0 9-4.03 9-9-4.97 0-9 4.03-9 9z"/><path d="M12 22c-4.97 0-9-4.03-9-9 4.97 0 9 4.03 9 9z"/><path d="M12 13V2"/></svg>
+          </div>
+          <h3>Sostenibilidad e Innovación</h3>
+          <p style="font-size: 0.94rem;">Desarrollo de productos responsables con el medio ambiente, empaques biodegradables e iniciativas con impacto positivo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. CONTACTO -->
+  <section id="contacto" class="cv-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Comunicación Directa</span>
+        <h2 class="section-title">Contacto</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="contact-info-box reveal">
+          <h3>Conectemos</h3>
+          <p>
+            Disponible para oportunidades laborales, prácticas, proyectos académicos o colaboraciones técnicas. No dudes en comunicarte directamente.
+          </p>
+
+          <div class="contact-channels">
+            <div class="contact-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8ec5fc" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <div>
+                <div style="font-size: 0.74rem; color: #93c5fd;">Correo electrónico</div>
+                <div style="font-weight: 600; font-size: 0.92rem;">kaibacorps777@gmail.com</div>
+              </div>
+              <button type="button" class="copy-badge" data-copy="kaibacorps777@gmail.com">Copiar</button>
+            </div>
+
+            <div class="contact-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8ec5fc" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div>
+                <div style="font-size: 0.74rem; color: #93c5fd;">Teléfono</div>
+                <div style="font-weight: 600; font-size: 0.92rem;">411 153 2775</div>
+              </div>
+              <button type="button" class="copy-badge" data-copy="4111532775">Copiar</button>
+            </div>
+
+            <div class="contact-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8ec5fc" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <div style="font-size: 0.74rem; color: #93c5fd;">Ubicación</div>
+                <div style="font-weight: 600; font-size: 0.92rem;">Cortazar, Guanajuato, México</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <h3 style="font-size: 1.65rem; margin-bottom: 0.4rem;">Envíame un mensaje</h3>
+          <p style="font-size: 0.92rem; color: var(--ink-muted); margin-bottom: 1.35rem;">
+            Completa los campos para preparar un correo directo a mi dirección personal.
+          </p>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="senderName">Nombre completo</label>
+              <input type="text" id="senderName" class="form-control" placeholder="Tu nombre o institución" required />
+            </div>
+
+            <div class="form-group">
+              <label for="senderEmail">Correo electrónico</label>
+              <input type="email" id="senderEmail" class="form-control" placeholder="tu.correo@ejemplo.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="senderSubject">Asunto</label>
+              <input type="text" id="senderSubject" class="form-control" placeholder="Oportunidad laboral, proyecto académico, consulta..." required />
+            </div>
+
+            <div class="form-group">
+              <label for="senderMessage">Mensaje</label>
+              <textarea id="senderMessage" rows="4" class="form-control" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              <span>Enviar mensaje por correo</span>
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <div class="form-feedback" id="formFeedback" role="status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="cv-footer">
+    <p><strong>Emiliano Juárez Hernández</strong> &bull; Currículum Vitae Digital</p>
+    <p style="font-size: 0.84rem; margin-top: 0.35rem;">Ingeniería Química &bull; TecNM Campus Celaya &bull; Cortazar, Guanajuato</p>
+  </footer>
+
+  <!-- Back to top -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Volver arriba" title="Volver arriba">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navbar = document.getElementById('navbar');
+      const scrollProgress = document.getElementById('scrollProgress');
+      const backToTop = document.getElementById('backToTop');
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      const navAnchors = navLinks.querySelectorAll('a');
+      const sections = document.querySelectorAll('section[id]');
+
+      menuToggle.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        menuToggle.textContent = isOpen ? '✕' : '☰';
+      });
+
+      navAnchors.forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          menuToggle.textContent = '☰';
+        });
+      });
+
+      const handleScroll = () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        scrollProgress.style.width = `${progress}%`;
+
+        if (scrollTop > 40) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+
+        if (scrollTop > 450) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+
+        let currentId = 'inicio';
+        sections.forEach(sec => {
+          const top = sec.offsetTop - 130;
+          if (scrollTop >= top) {
+            currentId = sec.getAttribute('id');
+          }
+        });
+
+        navAnchors.forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href') === `#${currentId}`);
+        });
+      };
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll();
+
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            const bars = entry.target.querySelectorAll('.progress-fill');
+            bars.forEach(bar => {
+              bar.style.width = bar.getAttribute('data-width');
+            });
+          }
+        });
+      }, { threshold: 0.14 });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const techCards = document.querySelectorAll('.tech-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.getAttribute('data-filter');
+
+          techCards.forEach(card => {
+            const cat = card.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      document.querySelectorAll('.copy-badge').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          const text = btn.getAttribute('data-copy');
+          try {
+            await navigator.clipboard.writeText(text);
+            const original = btn.textContent;
+            btn.textContent = '¡Copiado!';
+            setTimeout(() => { btn.textContent = original; }, 1800);
+          } catch (err) {
+            btn.textContent = text;
+          }
+        });
+      });
+
+      const contactForm = document.getElementById('contactForm');
+      const formFeedback = document.getElementById('formFeedback');
+
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('senderName').value.trim();
+        const email = document.getElementById('senderEmail').value.trim();
+        const subject = document.getElementById('senderSubject').value.trim();
+        const message = document.getElementById('senderMessage').value.trim();
+
+        const body = `Hola Emiliano,%0D%0A%0D%0A${encodeURIComponent(message)}%0D%0A%0D%0AAtentamente,%0D%0A${encodeURIComponent(name)} (${encodeURIComponent(email)})`;
+        const mailtoUrl = `mailto:kaibacorps777@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+        formFeedback.textContent = 'Abriendo tu cliente de correo con el mensaje preparado...';
+        window.location.href = mailtoUrl;
+      });
+    });
+  </script>
+</body>
+</html>
